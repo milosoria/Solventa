@@ -1,1 +1,1 @@
-README for project Solventa, by milosoria
+README for project Solventa, Grupo 82
