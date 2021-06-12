@@ -32,47 +32,58 @@
                     </div> <br>
                     <div>
                         ¿En qué tipo de vivienda vives? <br>
-                        <label for="homeType">Casa</label>
                         <input type="radio" name="homeType" value="Casa"/>
-                        <label for="homeType">Departamento</label>
+                        <label for="homeType">Casa</label> <br>
                         <input type="radio" name="homeType" value="Departamento"/>
+                        <label for="homeType">Departamento</label> <br>
                     </div> <br>
                     <div>
                         ¿Tienes un patio? <br>
-                        <label for="spaceAvailable">Sí, uno propio</label>
                         <input type="radio" name="spaceAvailable" value= <% true %>/>  
-                        <label for="spaceAvailable">Sí, uno compartido</label>
+                        <label for="spaceAvailable">Sí, uno propio</label> <br>
                         <input type="radio" name="spaceAvailable" value= <% true %>/>
-                        <label for="spaceAvailable">No</label>
+                        <label for="spaceAvailable">Sí, uno compartido</label> <br>
                         <input type="radio" name="spaceAvailable" value= <% false %>/>
+                        <label for="spaceAvailable">No</label> <br>
                     </div> <br>
                     <div>
                         Selecciona las alternativas que representen el tiempo que hay alguien en el hogar para un día cualquiera <br>
                         <input type="checkbox" name="afternoon" value="">
-                        <label for="timeafternoonAtHome">Hay por lo menos una persona durante la mañana</label> <br>
+                        <label for="afternoon">Hay por lo menos una persona durante la mañana</label> <br>
                         <input type="checkbox" name="morning">
                         <label for="morning">Hay por lo menos una persona durante la tarde</label> <br>
                         <input type="checkbox" name="night">
                         <label for="night">Hay por lo menos una persona durante la noche</label> <br>
-                        
-                        <label for="timeAtHome">¿?</label>
-                        <input type="text" name="timeAtHome" value=""/>
                     </div> <br>
                     <div>
-                        <label for="porpoertyArea">Clave: </label>
-                        <input type="password" name="porpoertyArea" value=""/>
+                        <label for="porpoertyArea">Ingresa la cantidad de metros cuadrados de tu propiedad</label> <br>
+                        <input type="number" name="porpoertyArea"/>
                     </div> <br>
                     <div>
-                        <label for="lightBulbQuantity">Foto de perfil: </label>
-                        <input type="file" name="lightBulbQuantity" value=""/>
+                        <label for="lightBulbQuantity">Ingresa la cantidad de ampolletas en el hogar </label> <br>
+                        <input type="number" name="lightBulbQuantity"/>
                     </div> <br>
                     <div>
-                        <label for="lightBulbType">Foto de perfil: </label>
-                        <input type="file" name="lightBulbType" value=""/>
+                        <label for="lightBulbType"> ¿Cuántas de tus ampolletas son LED?</label> <br>
+                        <input type="radio" name="lightBulbType" value= <% true %>/>  
+                        <label for="lightBulbType">Todas</label> <br>
+                        <input type="radio" name="lightBulbType" value= <% true %>/>
+                        <label for="lightBulbType">La mayoría</label> <br>
+                        <input type="radio" name="lightBulbType" value= <% false %>/>
+                        <label for="lightBulbType">La minoría</label> <br>
+                        <input type="radio" name="lightBulbType" value= <% false %>/>
+                        <label for="lightBulbType">Ninguna</label> <br>
                     </div> <br>
                     <div>
-                        <label for="proucts">Foto de perfil: </label>
-                        <input type="check" name="products" value=""/>
+                        Selecciona todas las medidas de eficiencia energética que hayas implementado en tu hogar<br>
+                        <input type="checkbox" name="solarPanel">
+                        <label for="solarPanel">Panel solar fotovoltáico</label> <br>
+                        <input type="checkbox" name="refrigerator">
+                        <label for="refrigerator">Refrigerador con etiqueta de Eficiencia Energética A</label> <br>
+                        <input type="checkbox" name="night">
+                        <label for="night">Secadora con etiqueta de Eficiencia Energética A</label> <br>
+                        <input type="checkbox" name="night">
+                        <label for="night">Estufa eléctrica con etiqueta de Eficiencia Energética A</label> <br>
                     </div> <br>
                     <div>
                         <input class="boton" type="submit" value="Consultar"/>
