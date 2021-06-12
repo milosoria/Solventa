@@ -5,12 +5,12 @@ const router = new KoaRouter();
 router.get('form.show', '/new', async (ctx) => {
     await ctx.render('form/new', {
         sendFormPath: () => ctx.router.url('form.results'), 
-    })
+        });
     });
 
 router.get('form.results', '/show', async (ctx) => {
     const categories = ctx.params;
-    const recomendations = [];
+    let recomendations = [];
     const norte = ["I" ,"II" ,"III" ,"IV", "XV"];
     const centro = ["V" ,"VI" ,"VII" ,"VIII", "IX","XIII" ,"XIV","XVI"];
     const sur = ["X" ,"XI" ,"XII"];

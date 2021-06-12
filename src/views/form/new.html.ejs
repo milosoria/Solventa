@@ -7,68 +7,76 @@
         <section>
             <div>
                 <h1>Recomendaciones Personalizadas</h1>
-                <h2>Rellena el siguiente formulario para que te ayudemos a encontrar la opción que más te conviene</h2>
+                <h3>Rellena el siguiente formulario para que te ayudemos a encontrar la opción que más te conviene</h3>
                 <form action="<%= sendFormPath %>" method="get">
-
-
-                <div>
                     <div>
-                        <label for="region">Región</label>
-                            <select name="region">
-                                <option value="I">I - Tarapacá</option> 
-                                <option value="II">II - Antofagasta</option>
-                                <option value="III">III - Atacama</option>
-                                <option value="IV">IV - Coquimbo</option>
-                                <option value="V">V - Valparaíso</option>
-                                <option value="VI">VI - O'Higgins</option>
-                                <option value="VII">VII - Maule</option>
-                                <option value="VIII">VIII - Biobio</option>
-                                <option value="IX">IX - La Araucanía</option>
-                                <option value="X">X - Los Lagos</option>
-                                <option value="XI">XI - Aysén</option>
-                                <option value="XII">XII - Magallanes</option>
-                                <option value="XIII">XIII - Metropolitana</option>
-                                <option value="XIV">XIV - Los Ríos</option>
-                                <option value="XV">XV - Arica y Parinacota</option>
-                                <option value="XVI">XVI - Ñuble</option>
-                            </select>
+                        <label for="region">¿En qué región vives?</label> <br>
+                        <select name="region">
+                            <option value="I">I - Tarapacá</option> 
+                            <option value="II">II - Antofagasta</option>
+                            <option value="III">III - Atacama</option>
+                            <option value="IV">IV - Coquimbo</option>
+                            <option value="V">V - Valparaíso</option>
+                            <option value="VI">VI - O'Higgins</option>
+                            <option value="VII">VII - Maule</option>
+                            <option value="VIII">VIII - Biobio</option>
+                            <option value="IX">IX - La Araucanía</option>
+                            <option value="X">X - Los Lagos</option>
+                            <option value="XI">XI - Aysén</option>
+                            <option value="XII">XII - Magallanes</option>
+                            <option value="XIII">XIII - Metropolitana</option>
+                            <option value="XIV">XIV - Los Ríos</option>
+                            <option value="XV">XV - Arica y Parinacota</option>
+                            <option value="XVI">XVI - Ñuble</option>
+                        </select>
+                    </div> <br>
+                    <div>
+                        ¿En qué tipo de vivienda vives? <br>
+                        <label for="homeType">Casa</label>
+                        <input type="radio" name="homeType" value="Casa"/>
+                        <label for="homeType">Departamento</label>
+                        <input type="radio" name="homeType" value="Departamento"/>
+                    </div> <br>
+                    <div>
+                        ¿Tienes un patio? <br>
+                        <label for="spaceAvailable">Sí, uno propio</label>
+                        <input type="radio" name="spaceAvailable" value= <% true %>/>  
+                        <label for="spaceAvailable">Sí, uno compartido</label>
+                        <input type="radio" name="spaceAvailable" value= <% true %>/>
+                        <label for="spaceAvailable">No</label>
+                        <input type="radio" name="spaceAvailable" value= <% false %>/>
+                    </div> <br>
+                    <div>
+                        Selecciona las alternativas que representen el tiempo que hay alguien en el hogar para un día cualquiera <br>
+                        <input type="checkbox" name="afternoon" value="">
+                        <label for="timeafternoonAtHome">Hay por lo menos una persona durante la mañana</label> <br>
+                        <input type="checkbox" name="morning">
+                        <label for="morning">Hay por lo menos una persona durante la tarde</label> <br>
+                        <input type="checkbox" name="night">
+                        <label for="night">Hay por lo menos una persona durante la noche</label> <br>
+                        
+                        <label for="timeAtHome">¿?</label>
+                        <input type="text" name="timeAtHome" value=""/>
+                    </div> <br>
+                    <div>
+                        <label for="porpoertyArea">Clave: </label>
+                        <input type="password" name="porpoertyArea" value=""/>
+                    </div> <br>
+                    <div>
+                        <label for="lightBulbQuantity">Foto de perfil: </label>
+                        <input type="file" name="lightBulbQuantity" value=""/>
+                    </div> <br>
+                    <div>
+                        <label for="lightBulbType">Foto de perfil: </label>
+                        <input type="file" name="lightBulbType" value=""/>
+                    </div> <br>
+                    <div>
+                        <label for="proucts">Foto de perfil: </label>
+                        <input type="check" name="products" value=""/>
+                    </div> <br>
+                    <div>
+                        <input class="boton" type="submit" value="Consultar"/>
                     </div>
-                </div>
-                <div>
-                    Tipo de vivienda <br>
-                    <label for="homeType">Casa</label>
-                    <input type="radio" name="homeType" value="Casa"/>
-                    <label for="homeType">Departamento</label>
-                    <input type="radio" name="homeType" value="Departamento"/>
-                </div>
-                <div>
-                    <label for="spaceAvailable">Patio</label>
-                    <input type="text" name="spaceAvailable" value=""/>
-                </div>
-                <div>
-                    <label for="timeAtHome">¿?</label>
-                    <input type="text" name="timeAtHome" value=""/>
-                </div>
-                <div>
-                    <label for="porpoertyArea">Clave: </label>
-                    <input type="password" name="porpoertyArea" value=""/>
-                </div>
-                <div>
-                    <label for="lightBulbQuantity">Foto de perfil: </label>
-                    <input type="file" name="lightBulbQuantity" value=""/>
-                </div>
-                <div>
-                    <label for="lightBulbType">Foto de perfil: </label>
-                    <input type="file" name="lightBulbType" value=""/>
-                </div>
-                <div>
-                    <label for="proucts">Foto de perfil: </label>
-                    <input type="check" name="products" value=""/>
-                </div>
-
-                <div>
-                    <input class="boton" type="submit" value="Consultar"/>
-                </div>
                 </form>
             </div>
         </section>
