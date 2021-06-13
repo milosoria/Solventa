@@ -18,7 +18,8 @@ module.exports = (sequelize, DataTypes) => {
     price: DataTypes.FLOAT,
     brandName: DataTypes.STRING,
     modelName: DataTypes.STRING,
-    description: DataTypes.TEXT
+    description: DataTypes.TEXT,
+    url: DataTypes.TEXT
   }, {
     sequelize,
     modelName: 'product',

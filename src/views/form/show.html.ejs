@@ -12,8 +12,8 @@
                 <% productsList.forEach((product) => { %>
                     <% if (recomendation == product.category) { %>
                         <li><%= product.brandName %> - <%= product.modelName %></br>Precio: <%= product.price %></br>Descripción: <%= product.description %></li>
-                        <%= console.log("TENEMOS", product.url ) %>
-                        <!-- <a><img class="media" src="<%= product.url %>" /></a> -->
+                        <!-- <%= console.log("TENEMOS", product.url ) %> -->
+                        <a><img style="height: 400pt" class="media" src="<%= product.url %>" /></a>
                     <% } %>
                 <% }) %>
             </ul>
