@@ -1,6 +1,7 @@
 /* Style the button that is used to open and close the collapsible content */
 .collapsible {
-    background-color: #eee;
+    border-radius: 25px;
+    background-color: rgb(214, 213, 213);
     color: #444;
     cursor: pointer;
     padding: 18px;
@@ -16,9 +17,6 @@
     background-color: #ccc;
 }
 
-.active {
-    display: flow;
-}
 
 /* Style the collapsible content. Note: hidden by default */
 .content {
@@ -26,13 +24,12 @@
     overflow: hidden;
     background-color: #f1f1f1;
     max-height: 0;
-    overflow: hidden;
+    border-radius: 25px;
     transition: max-height 0.2s ease-out;
 }
 
 .collapsible:after {
     content: '\02795';
-
     /* Unicode character for "plus" sign (+) */
     font-size: 13px;
     color: white;
@@ -45,9 +42,13 @@
 
     /* Unicode character for "minus" sign (-) */
 }
-
-.row-item {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr) auto;
-    grid-gap: 5px;
+.body {
+    padding-right: 2%;
+}
+.product {
+    border-style: solid;
+    border: #444;
+    display: flex;
+    margin: 1%;
+    height: fit-content;
 }

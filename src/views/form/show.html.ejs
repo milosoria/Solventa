@@ -6,33 +6,32 @@
     <body>
 
         <div class="container">
-            <h1>Te Recomendamos los siguientes productos:</h1>
             <% recomendations.forEach((recomendation) => { %>
-                <button type="button" class="collapsible"><%= recomendation %></button>
+                <button type="button" class="collapsible"><strong><%= recomendation %></strong></button>
                     <div class="content">
                         <% productsList.forEach((product) => { %>
                             <% if (recomendation == product.category) { %>
-                            <div class="row-item">
-                                <div class="card" >
-                                  <img class="card-img-top" src="<% product.url %>" alt="">
-                                  <div class="card-body">
-                                      <h5 class="card-title"><%= product.brandName%> - <%=product.modelName%></h5>
-                                      <p class="card-text"><%= product.description%></p>
-                                  </div>
-                                  <ul class="list-group list-group-flush">
-                                      <li class="list-group-item">Precio: $<%= product.price%></li>
-                                  </ul>
-                                  <div class="card-body">
-                                      <a href="#" class="btn btn-warning">Encuentrálo aquí</a>
-                                  </div>
+                                <div class="product">
+                                        <img class="rounded img-thumbnail float-left" src="<%= product.url %>" style="height: auto;width: 300px;">
+                                        <div class="body">
+                                            <div class="jumbotron jumbotron-fluid">
+                                                <h3><%=product.modelName%> <span class="badge badge-secondary"><%= product.brandName%></span></h3>
+                                                <p><%= product.description%></p>
+                                                <p class="font-weight-bold">Eficiencia: A+</p>
+                                                <hr class="my-4">
+                                                <p class="font-italic">Precio: $ <span class="border"><%= product.price%> </span></p>
+                                                <a href="#" class="btn btn-warning">Ver Detalle</a>
+                                            </div>
+                                        </div>
                                 </div>
-                            </div>
+                                <br>
                             <% } %>
                         <% }) %>
+
                     </div>
             <% }); %>
 
-        </div>
+        <div>
     </body>
     <script >
         var coll = document.getElementsByClassName("collapsible");
@@ -47,6 +46,6 @@
               content.style.maxHeight = content.scrollHeight + "px";
             }
           });
-        } 
+        }
     </script>
 </html>
