@@ -45,3 +45,9 @@
 
     /* Unicode character for "minus" sign (-) */
 }
+
+.row-item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) auto;
+    grid-gap: 5px;
+}

@@ -4,19 +4,33 @@
         <meta charset="UTF-8">
     </head>
     <body>
-        <h1>Te Recomendamos los siguientes productos:</h1>
-        <% recomendations.forEach((recomendation) => { %>
-        <button type="button" class="collapsible"><%= recomendation %></button>
-        <div class="content">
-            <ul>
-                <% productsList.forEach((product) => { %>
-                    <% if (recomendation == product.category) { %>
-                        <li><%= product.brandName %> - <%= product.modelName %></br>Precio: <%= product.price %></br>Descripción: <%= product.description %></li>
-                    <% } %>
-                <% }) %>
-            </ul>
+        <div class="container">
+            <h1>Te Recomendamos los siguientes productos:</h1>
+            <% recomendations.forEach((recomendation) => { %>
+                <button type="button" class="collapsible"><%= recomendation %></button>
+                    <div class="content">
+                        <% productsList.forEach((product) => { %>
+                            <% if (recomendation == product.category) { %>
+                            <div class="row-item">
+                                <div class="card" >
+                                  <img class="card-img-top" src="" alt="">
+                                  <div class="card-body">
+                                      <h5 class="card-title"><%= product.brandName%> - <%=product.modelName%></h5>
+                                      <p class="card-text"><%= product.description%></p>
+                                  </div>
+                                  <ul class="list-group list-group-flush">
+                                      <li class="list-group-item">Precio: $<%= product.price%></li>
+                                  </ul>
+                                  <div class="card-body">
+                                      <a href="#" class="btn btn-warning">Encuentrálo aquí</a>
+                                  </div>
+                                </div>
+                            </div>
+                            <% } %>
+                        <% }) %>
+                    </div>
+            <% }); %>
         </div>
-        <% }); %>
     </body>
     <script >
         var coll = document.getElementsByClassName("collapsible");
