@@ -2,16 +2,17 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <title>Watte-E | Recomendaciones Personalizadas</title>
     </head>
     <body>
         <section>
-            <div>
+            <div class="container">
                 <h1>Recomendaciones Personalizadas</h1>
-                <h3>Rellena el siguiente formulario para que te ayudemos a encontrar la opción que más te conviene</h3>
+                <h3>Rellena el siguiente formulario para que te ayudemos a encontrar la opción que más te conviene</h3> <br>
                 <form action="<%=sendFormPath%>" method="post">
-                    <div>
+                    <div class="form-group" >
                         <label for="region">¿En qué región vives?</label> <br>
-                        <select name="region">
+                        <select class="form-control" name="region">
                             <option value="I">I - Tarapacá</option> 
                             <option value="II">II - Antofagasta</option>
                             <option value="III">III - Atacama</option>
@@ -30,40 +31,56 @@
                             <option value="XVI">XVI - Ñuble</option>
                         </select>
                     </div> <br>
-                    <div>
-                        ¿En qué tipo de vivienda vives? <br>
-                        <input type="radio" name="homeType" value="Casa"/>
-                        <label for="homeType">Casa</label> <br>
-                        <input type="radio" name="homeType" value="Departamento"/>
-                        <label for="homeType">Departamento</label> <br>
+                    <label>¿En qué tipo de vivienda vives?</label>
+                    <div class="form-group">
+                        <div class="form-control">
+                            <input type="radio" name="homeType" value="Casa"/>
+                            <label class="form-label" for="homeType">Casa</label> <br>
+                        </div>
+                        <div class="form-control">
+                            <input type="radio" name="homeType" value="Departamento"/>
+                            <label class="form-label" for="homeType">Departamento</label> <br>
+                        </div>
                     </div> <br>
-                    <div>
-                        ¿Tienes un patio? <br>
-                        <input type="radio" name="spaceAvailable" value= <% true %>/>  
-                        <label for="spaceAvailable">Sí, uno propio</label> <br>
-                        <input type="radio" name="spaceAvailable" value= <% true %>/>
-                        <label for="spaceAvailable">Sí, uno compartido</label> <br>
-                        <input type="radio" name="spaceAvailable" value= <% false %>/>
-                        <label for="spaceAvailable">No</label> <br>
+                    <div class="form-group" >
+                        <label>¿Tienes un patio?</label>
+                        <div class="form-control">
+                            <input type="radio" name="spaceAvailable" value= <% true %>/>  
+                            <label for="spaceAvailable">Sí, uno propio</label> <br>
+                        </div>
+                        <div class="form-control">
+                            <input type="radio" name="spaceAvailable" value= <% true %>/>
+                            <label for="spaceAvailable">Sí, uno compartido</label> <br>
+                        </div>
+                        <div class="form-control">
+                            <input type="radio" name="spaceAvailable" value= <% false %>/>
+                            <label for="spaceAvailable">No</label> <br>
+                        </div>
                     </div> <br>
-                    <div>
-                        Selecciona las alternativas que representen el tiempo que hay alguien en el hogar para un día cualquiera <br>
-                        <input type="checkbox" name="afternoon">
-                        <label for="afternoon">Hay por lo menos una persona durante la mañana</label> <br>
-                        <input type="checkbox" name="morning">
-                        <label for="morning">Hay por lo menos una persona durante la tarde</label> <br>
-                        <input type="checkbox" name="night">
-                        <label for="night">Hay por lo menos una persona durante la noche</label> <br>
+                    <div class="form-group" >
+                        <label>Selecciona las alternativas que representen el tiempo que hay alguien en el hogar para un día cualquiera</label> 
+                        <div class="form-control">
+                            <input type="checkbox" name="afternoon">
+                            <label for="afternoon">Hay por lo menos una persona durante la mañana</label> <br>
+                        </div>
+                        <div class="form-control">
+                            <input type="checkbox" name="morning">
+                            <label for="morning">Hay por lo menos una persona durante la tarde</label> <br>
+                        </div>
+                        <div class="form-control">
+                            <input type="checkbox" name="night">
+                            <label for="night">Hay por lo menos una persona durante la noche</label> <br>
+                        </div>
                     </div> <br>
-                    <div>
+                    <div class="form-group" >
                         <label for="propertyArea">Ingresa la cantidad de metros cuadrados de tu propiedad</label> <br>
-                        <input type="number" name="propertyArea"/>
+                        <input class="form-control" type="number" name="propertyArea"/>
                     </div> <br>
-                    <div>
+                    <div class="form-group" >
                         <label for="lightBulbQuantity">Ingresa la cantidad de ampolletas en el hogar </label> <br>
-                        <input type="number" name="lightBulbQuantity"/>
+                        <input class="form-control" type="number" name="lightBulbQuantity"/>
                     </div> <br>
-                    <div>
+                    <div class="form-group" >
                         <label for="lightBulbType"> ¿Cuántas de tus ampolletas son LED?</label> <br>
                         <input type="radio" name="lightBulbType" value= <% true %>/>  
                         <label for="lightBulbType">Todas</label> <br>
@@ -74,7 +91,7 @@
                         <input type="radio" name="lightBulbType" value= <% false %>/>
                         <label for="lightBulbType">Ninguna</label> <br>
                     </div> <br>
-                    <div>
+                    <div class="form-group" >
                         Selecciona todas las medidas de eficiencia energética que hayas implementado en tu hogar<br>
                         <input type="checkbox" name="solarPanel">
                         <label for="solarPanel">Panel solar fotovoltáico</label> <br>
@@ -86,7 +103,7 @@
                         <label for="stove">Estufa eléctrica con etiqueta de Eficiencia Energética A</label> <br>
                     </div> <br>
                     <div>
-                        <input type="submit" value="Consultar"/>
+                        <input class="btn btn-success" type="submit" value="Consultar"/>
                     </div>
                 </form>
             </div>

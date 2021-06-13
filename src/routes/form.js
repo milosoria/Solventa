@@ -10,7 +10,6 @@ router.get('form.new', '/new', async (ctx) => {
 
 router.post('form.results', '/show', async (ctx) => {
     const categories = ctx.request.body;
-    console.log(categories);
     const productsList = await ctx.orm.product.findAll();
     let recomendations = [];
     const norte = ["I" ,"II" ,"III" ,"IV", "XV"];
@@ -33,8 +32,6 @@ router.post('form.results', '/show', async (ctx) => {
     if (!categories.refrigerator) {
         recomendations.push("Refrigeradores")
     };
-    
-    console.log(recomendations);
     
     // Se entregan las categorías recomendadas junto con el precio mínimo de los productos
     await ctx.render('form/show', {
