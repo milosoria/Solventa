@@ -8,9 +8,10 @@ router.get('form.new', '/new', async (ctx) => {
     });
 });
 
-router.get('form.results', '/show', async (ctx) => {
-    const productsList = await ctx.orm.product.findAll();
+router.post('form.results', '/show', async (ctx) => {
     const categories = ctx.request.body;
+    console.log(categories);
+    const productsList = await ctx.orm.product.findAll();
     let recomendations = [];
     const norte = ["I" ,"II" ,"III" ,"IV", "XV"];
     const centro = ["V" ,"VI" ,"VII" ,"VIII", "IX","XIII" ,"XIV","XVI"];

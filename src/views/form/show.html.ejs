@@ -8,7 +8,7 @@
         <% recomendations.forEach((recomendation) => { %>
             <h2><%= recomendation %></h2>
             <ul>
-                <% productList.forEach((product) => { %>
+                <% productsList.forEach((product) => { %>
                     <% if (recomendation == product.category) { %>
                         <li><%= product.brandName %> - <%= product.modelName %></br>Precio: <%= product.price %></br>Descripción: <%= product.description %></li>
                     <% } %>

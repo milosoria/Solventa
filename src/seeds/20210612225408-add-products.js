@@ -3,9 +3,9 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     const productsArray = []
-    // PANELES
+    // Paneles Fotovoltaicos
     productsArray.push({
-        category:"Paneles" ,
+        category:"Paneles Fotovoltaicos" ,
         price:97500 ,
         brandName:"Punto Solar",
         modelName: "Panel Solar 400W",
@@ -14,17 +14,17 @@ module.exports = {
         updatedAt: new Date(),
     })
     productsArray.push({
-        category: "Paneles",
+        category: "Paneles Fotovoltaicos",
         price: 150500,
         brandName: "Punto Solar",
         modelName: "Panel Solar 800W",
         description: "Panel solar de la empresa Punto Solar de 800 Watts de potencia",
-createdAt: new Date(),
-updatedAt: new Date(),
+        createdAt: new Date(),
+        updatedAt: new Date(),
 
     })
     productsArray.push({
-        category: "Paneles",
+        category: "Paneles Fotovoltaicos",
         price: 159990,
         brandName: "Yi-Solar",
         modelName: "Panel fotovoltaico 200W",
@@ -33,9 +33,9 @@ updatedAt: new Date(),
         createdAt: new Date(),
         updatedAt: new Date(),
     })
-    // LUMINARIA
+    // Ampolletas LED
     productsArray.push({
-        category: "Luminaria",
+        category: "Ampolletas LED",
         price: 27990,
         brandName:"Phillips",
         modelName: "Ampolleta eco twister E27 23W",
@@ -44,7 +44,7 @@ updatedAt: new Date(),
         updatedAt: new Date(),
     })
     productsArray.push({
-        category: "Luminaria",
+        category: "Ampolletas LED",
         price: 6670,
         brandName: "General Electric",
         modelName: "Ampolleta LED 220V 7W 35 gdo",
@@ -53,7 +53,7 @@ updatedAt: new Date(),
         updatedAt: new Date(),
     })
     productsArray.push({
-        category: "Luminaria",
+        category: "Ampolletas LED",
         price:9900,
         brandName: "Ozom" ,
         modelName: "Ampolleta led E27 60W",
@@ -92,6 +92,7 @@ updatedAt: new Date(),
 
         return queryInterface.bulkInsert('products', productsArray);
     },
-/*   down: async (queryInterface, Sequelize) => {
-  } */
+    
+    down: async (queryInterface, Sequelize) => {
+    }
 };
