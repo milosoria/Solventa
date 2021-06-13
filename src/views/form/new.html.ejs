@@ -8,7 +8,7 @@
             <div>
                 <h1>Recomendaciones Personalizadas</h1>
                 <h3>Rellena el siguiente formulario para que te ayudemos a encontrar la opción que más te conviene</h3>
-                <form action="<%= sendFormPath %>" method="get">
+                <form action="<%=sendFormPath%>" method="post">
                     <div>
                         <label for="region">¿En qué región vives?</label> <br>
                         <select name="region">
@@ -48,7 +48,7 @@
                     </div> <br>
                     <div>
                         Selecciona las alternativas que representen el tiempo que hay alguien en el hogar para un día cualquiera <br>
-                        <input type="checkbox" name="afternoon" value="">
+                        <input type="checkbox" name="afternoon">
                         <label for="afternoon">Hay por lo menos una persona durante la mañana</label> <br>
                         <input type="checkbox" name="morning">
                         <label for="morning">Hay por lo menos una persona durante la tarde</label> <br>
@@ -56,8 +56,8 @@
                         <label for="night">Hay por lo menos una persona durante la noche</label> <br>
                     </div> <br>
                     <div>
-                        <label for="porpoertyArea">Ingresa la cantidad de metros cuadrados de tu propiedad</label> <br>
-                        <input type="number" name="porpoertyArea"/>
+                        <label for="propertyArea">Ingresa la cantidad de metros cuadrados de tu propiedad</label> <br>
+                        <input type="number" name="propertyArea"/>
                     </div> <br>
                     <div>
                         <label for="lightBulbQuantity">Ingresa la cantidad de ampolletas en el hogar </label> <br>
@@ -80,13 +80,13 @@
                         <label for="solarPanel">Panel solar fotovoltáico</label> <br>
                         <input type="checkbox" name="refrigerator">
                         <label for="refrigerator">Refrigerador con etiqueta de Eficiencia Energética A</label> <br>
-                        <input type="checkbox" name="night">
-                        <label for="night">Secadora con etiqueta de Eficiencia Energética A</label> <br>
-                        <input type="checkbox" name="night">
-                        <label for="night">Estufa eléctrica con etiqueta de Eficiencia Energética A</label> <br>
+                        <input type="checkbox" name="dryer">
+                        <label for="dryer">Secadora con etiqueta de Eficiencia Energética A</label> <br>
+                        <input type="checkbox" name="stove">
+                        <label for="stove">Estufa eléctrica con etiqueta de Eficiencia Energética A</label> <br>
                     </div> <br>
                     <div>
-                        <input class="boton" type="submit" value="Consultar"/>
+                        <input type="submit" value="Consultar"/>
                     </div>
                 </form>
             </div>

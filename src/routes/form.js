@@ -2,15 +2,15 @@ const KoaRouter = require('koa-router');
 
 const router = new KoaRouter();
 
-router.get('form.show', '/new', async (ctx) => {
+router.get('form.new', '/new', async (ctx) => {
     await ctx.render('form/new', {
-        sendFormPath: () => ctx.router.url('form.results'), 
-        });
+        sendFormPath: ctx.router.url('form.results') 
     });
+});
 
 router.get('form.results', '/show', async (ctx) => {
     const productsList = await ctx.orm.product.findAll();
-    const categories = ctx.params;
+    const categories = ctx.request.body;
     let recomendations = [];
     const norte = ["I" ,"II" ,"III" ,"IV", "XV"];
     const centro = ["V" ,"VI" ,"VII" ,"VIII", "IX","XIII" ,"XIV","XVI"];
@@ -18,21 +18,22 @@ router.get('form.results', '/show', async (ctx) => {
     // Incluir paneles solares LED en la recomendación
     if ((centro.includes(categories.region) || norte.includes(categories.region)) && 
         (categories.homeType == "Casa") && 
-        (categories.spaceAvailable == true) && 
-        (categories.timeAtHome.includes("Mañana") && categories.timeAtHome.includes("Tarde")) &&
+        categories.spaceAvailable && 
+        (categories.morning == 'on' && categories.afternoon == 'on') &&
         (categories.propertyArea >= 400) && 
-        (!categories.products.includes("Paneles Fotovoltaicos"))) {
+        (!categories.solarPanel)) {
         recomendations.push("Paneles Fotovoltaicos");
     };
     // Incluir ampolletas LED en la recomendación
-    if ((categories.lightBulbQuantity >= 20) && 
-        (categories.lightBulbType != "LED")) {
+    if ((categories.lightBulbQuantity >= 20) && categories.lightBulbType) {
         recomendations.push("Ampolletas LED");
     };
     // Incluir refrigeradores en la recomendación
-    if (!categories.products.includes("Refrigeradores")) {
+    if (!categories.refrigerator) {
         recomendations.push("Refrigeradores")
     };
+    
+    console.log(recomendations);
     
     // Se entregan las categorías recomendadas junto con el precio mínimo de los productos
     await ctx.render('form/show', {
