@@ -9,6 +9,7 @@ router.get('form.show', '/new', async (ctx) => {
     });
 
 router.get('form.results', '/show', async (ctx) => {
+    const productsList = await ctx.orm.product.findAll();
     const categories = ctx.params;
     let recomendations = [];
     const norte = ["I" ,"II" ,"III" ,"IV", "XV"];
@@ -36,7 +37,8 @@ router.get('form.results', '/show', async (ctx) => {
     // Se entregan las categorías recomendadas junto con el precio mínimo de los productos
     await ctx.render('form/show', {
         categories,
-        recomendations
+        recomendations,
+        productsList,
     })
     });
 

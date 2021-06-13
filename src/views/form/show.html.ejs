@@ -4,6 +4,16 @@
         <meta charset="UTF-8">
     </head>
     <body>
-        
+        <h1>Te Recomendamos los siguientes productos:</h1>
+        <% recomendations.forEach((recomendation) => { %>
+            <h2><%= recomendation %></h2>
+            <ul>
+                <% productList.forEach((product) => { %>
+                    <% if (recomendation == product.category) { %>
+                        <li><%= product.brandName %> - <%= product.modelName %></br>Precio: <%= product.price %></br>Descripción: <%= product.description %></li>
+                    <% } %>
+                <% }) %>
+            </ul>
+        <% }); %>
     </body>
 </html>
