@@ -2,15 +2,15 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Watte-E | Recomendaciones Personalizadas</title>
+        <title> Watte-E | Recomendaciones Personalizadas </title>
     </head>
     <body>
         <section>
-            <div class="container">
+            <div class="container" style="margin-top: 20px; margin-bottom: 20px; border-radius: 2%; background-color: #d4f8cc;">
                 <h1>Recomendaciones Personalizadas</h1>
                 <h3>Rellena el siguiente formulario para que te ayudemos a encontrar la opción que más te conviene</h3> <br>
                 <form action="<%=sendFormPath%>" method="post">
-                    <div class="form-group" >
+                    <div class="form-group">
                         <label for="region">¿En qué región vives?</label> <br>
                         <select class="form-control" name="region">
                             <option value="I">I - Tarapacá</option> 
@@ -81,30 +81,46 @@
                         <input class="form-control" type="number" name="lightBulbQuantity"/>
                     </div> <br>
                     <div class="form-group" >
-                        <label for="lightBulbType"> ¿Cuántas de tus ampolletas son LED?</label> <br>
-                        <input type="radio" name="lightBulbType" value= <% true %>/>  
-                        <label for="lightBulbType">Todas</label> <br>
-                        <input type="radio" name="lightBulbType" value= <% true %>/>
-                        <label for="lightBulbType">La mayoría</label> <br>
-                        <input type="radio" name="lightBulbType" value= <% false %>/>
-                        <label for="lightBulbType">La minoría</label> <br>
-                        <input type="radio" name="lightBulbType" value= <% false %>/>
-                        <label for="lightBulbType">Ninguna</label> <br>
+                        <label> ¿Cuántas de tus ampolletas son LED?</label>
+                        <div class="form-control">
+                            <input type="radio" name="lightBulbType" value= <% true %>/>  
+                            <label for="lightBulbType">Todas</label> <br>
+                        </div>
+                        <div class="form-control">
+                            <input type="radio" name="lightBulbType" value= <% true %>/>
+                            <label for="lightBulbType">La mayoría</label> <br>
+                        </div>
+                        <div class="form-control">
+                            <input type="radio" name="lightBulbType" value= <% false %>/>
+                            <label for="lightBulbType">La minoría</label> <br>
+                        </div>
+                        <div class="form-control">
+                            <input type="radio" name="lightBulbType" value= <% false %>/>
+                            <label for="lightBulbType">Ninguna</label> <br>
+                        </div>
                     </div> <br>
                     <div class="form-group" >
-                        Selecciona todas las medidas de eficiencia energética que hayas implementado en tu hogar<br>
-                        <input type="checkbox" name="solarPanel">
-                        <label for="solarPanel">Panel solar fotovoltáico</label> <br>
-                        <input type="checkbox" name="refrigerator">
-                        <label for="refrigerator">Refrigerador con etiqueta de Eficiencia Energética A</label> <br>
-                        <input type="checkbox" name="dryer">
-                        <label for="dryer">Secadora con etiqueta de Eficiencia Energética A</label> <br>
+                        <label>Selecciona todas las medidas de eficiencia energética que hayas implementado en tu hogar</label>
+                        <div class="form-control">
+                            <input type="checkbox" name="solarPanel">
+                            <label for="solarPanel">Panel solar fotovoltáico</label> <br>
+                        </div>
+                        <div class="form-control">
+                            <input type="checkbox" name="refrigerator">
+                            <label for="refrigerator">Refrigerador con etiqueta de Eficiencia Energética A</label> <br>
+                        </div>
+                        <div class="form-control">
+                            <input type="checkbox" name="dryer">
+                            <label for="dryer">Secadora con etiqueta de Eficiencia Energética A</label> <br>
+                        </div>
+                        <div class="form-control">
                         <input type="checkbox" name="stove">
                         <label for="stove">Estufa eléctrica con etiqueta de Eficiencia Energética A</label> <br>
+                        </div>
                     </div> <br>
-                    <div>
+                    <div class="col text-center">
                         <input class="btn btn-success" type="submit" value="Consultar"/>
-                    </div>
+                    </div> <br>
                 </form>
             </div>
         </section>
