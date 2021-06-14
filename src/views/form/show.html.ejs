@@ -7,7 +7,8 @@
 
         <div class="container">
             <% recomendations.forEach((recomendation) => { %>
-                <button type="button" class="collapsible"><strong><%= recomendation %></strong></button>
+                <button type="button" class="collapsible"
+                    style="border-style:solid; border-color:black"><strong><%= recomendation %></strong></button>
                     <div class="content">
                         <% productsList.forEach((product) => { %>
                             <% if (recomendation == product.category) { %>
@@ -16,12 +17,15 @@
                                         <img class="rounded img-thumbnail float-left" src="<%= product.url %>" style="height: auto;width: 300px;">
                                         <div class="body">
                                             <div class="jumbotron jumbotron-fluid">
-                                                <h3><%=product.modelName%> <span class="badge badge-secondary"><%= product.brandName%></span></h3>
+                                                <h3 style="font-weight:bold;"><%=product.modelName%> <span class="badge badge-secondary"><%= product.brandName%></span></h3>
                                                 <p><%= product.description%></p>
+                                                <% if (product.category != "Paneles Fotovoltaicos") {%>
                                                 <p class="font-weight-bold">Eficiencia: A+</p>
+                                                <% } %>
                                                 <hr class="my-4">
                                                 <p class="font-italic">Precio: $ <span class="border"><%= product.price%> </span></p>
-                                                <a href="#" class="btn btn-warning">Ver Detalle</a>
+                                                <p class="font-italic">Ahorro mensual: $ <span class="border"><%=Math.floor(Math.random()* 5000); a< 1000?1250: Math.floor(Math.random()* 5000)%> </span></p>
+                                                <a href="#" class="btn btn-warning" style="background:#ffc00f;">Ver Detalle</a>
                                             </div>
                                         </div>
                                 </div>
