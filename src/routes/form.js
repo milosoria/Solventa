@@ -11,7 +11,6 @@ router.get('form.new', '/new', async (ctx) => {
 router.post('form.results', '/show', async (ctx) => {
     const categories = ctx.request.body;
     const productsList = await ctx.orm.product.findAll();
-    console.log("AQUI CTM!!!!!", productsList)
     let recomendations = [];
     const norte = ["I" ,"II" ,"III" ,"IV", "XV"];
     const centro = ["V" ,"VI" ,"VII" ,"VIII", "IX","XIII" ,"XIV","XVI"];
