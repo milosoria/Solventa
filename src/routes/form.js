@@ -1,5 +1,5 @@
 const KoaRouter = require('koa-router');
-const {getRecomendations} = require('../../middlewares/form');
+const { getRecomendations } = require('../../middlewares/form');
 
 const router = new KoaRouter();
 
@@ -18,7 +18,7 @@ router.post('form.results', '/show', async (ctx) => {
         categories,
         recomendations,
         productsList,
-    })
     });
+});
 
 module.exports = router;
