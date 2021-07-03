@@ -60,4 +60,4 @@ Now go to http://localhost:3000 and start browsing :)
 - [ ] Logica de las recomendaciones
 - [ ] Hacer consultas para guardar datos estaticamente
 
-servic: name, rating, installedCapacity, price, brand, photo, location, maxReturn, minReturn, maxYearly, minYearly, spaceAvailable, gasReduction,  productLifetime
+service: name, rating, installedCapacity, price, brand, photo, location, maxReturn, minReturn, maxYearly, minYearly, spaceAvailable, gasReduction,  productLifetime
