@@ -1,5 +1,5 @@
 const KoaRouter = require('koa-router');
-const {getRecomendations} = require('../../middlewares/form');
+const {getRecomendations} = require('../middlewares/form');
 
 const router = new KoaRouter();
 
@@ -10,15 +10,15 @@ router.get('form.new', '/new', async (ctx) => {
 });
 
 router.post('form.results', '/show', async (ctx) => {
-    const categories = ctx.request.body;
-    const productsList = await ctx.orm.product.findAll();
-    const recomendations = getRecomendations(categories, productsList); 
+    const formData = ctx.request.body;
+    const serviceList = await ctx.orm.service.findAll();
+    const recomendations = getRecomendations(formData, serviceList); 
     // Se entregan las categorías recomendadas junto con el precio mínimo de los productos
     await ctx.render('form/show', {
-        categories,
+        formData,
         recomendations,
-        productsList,
+        serviceList,
     })
     });
 
-module.exports = router;
+module.exports

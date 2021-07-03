@@ -11,118 +11,45 @@
                 <h3>Rellena el siguiente formulario para que te ayudemos a encontrar la opción que más te conviene</h3> <br>
                 <form action="<%=sendFormPath%>" method="post">
                     <div class="form-group">
-                        <label for="region">¿En qué región vives?</label> <br>
-                        <select class="form-control" name="region">
-                            <option value="I">I - Tarapacá</option> 
-                            <option value="II">II - Antofagasta</option>
-                            <option value="III">III - Atacama</option>
-                            <option value="IV">IV - Coquimbo</option>
-                            <option value="V">V - Valparaíso</option>
-                            <option value="VI">VI - O'Higgins</option>
-                            <option value="VII">VII - Maule</option>
-                            <option value="VIII">VIII - Biobio</option>
-                            <option value="IX">IX - La Araucanía</option>
-                            <option value="X">X - Los Lagos</option>
-                            <option value="XI">XI - Aysén</option>
-                            <option value="XII">XII - Magallanes</option>
-                            <option value="XIII">XIII - Metropolitana</option>
-                            <option value="XIV">XIV - Los Ríos</option>
-                            <option value="XV">XV - Arica y Parinacota</option>
-                            <option value="XVI">XVI - Ñuble</option>
-                        </select>
+                        <label for="comuna">¿En qué comuna vives?</label>
+                        <br>
                     </div> <br>
-                    <label>¿En qué tipo de vivienda vives?</label>
+                    <div class="form-group" >
+                        <label for="squareMeters">Ingresa la cantidad de metros cuadrados de tu propiedad
+                        <input class="form-control" type="number"
+                        name="squareMeters"/>
+                    </div> <br>
                     <div class="form-group">
-                        <div class="form-control">
-                            <input type="radio" name="homeType" value="Casa"/>
-                            <label class="form-label" for="homeType">Casa</label> <br>
-                        </div>
-                        <div class="form-control">
-                            <input type="radio" name="homeType" value="Departamento"/>
-                            <label class="form-label" for="homeType">Departamento</label> <br>
-                        </div>
-                    </div> <br>
-                    <div class="form-group" >
-                        <label>¿Tienes un patio?</label>
-                        <div class="form-control">
-                            <input type="radio" name="spaceAvailable" value= <% true %>/>  
-                            <label for="spaceAvailable">Sí, uno propio</label> <br>
-                        </div>
-                        <div class="form-control">
-                            <input type="radio" name="spaceAvailable" value= <% true %>/>
-                            <label for="spaceAvailable">Sí, uno compartido</label> <br>
-                        </div>
-                        <div class="form-control">
-                            <input type="radio" name="spaceAvailable" value= <% false %>/>
-                            <label for="spaceAvailable">No</label> <br>
-                        </div>
-                    </div> <br>
-                    <div class="form-group" >
-                        <label>Selecciona las alternativas que representen el tiempo que hay alguien en el hogar para un día cualquiera</label> 
-                        <div class="form-control">
-                            <input type="checkbox" name="afternoon">
-                            <label for="afternoon">Hay por lo menos una persona durante la mañana</label> <br>
-                        </div>
-                        <div class="form-control">
-                            <input type="checkbox" name="morning">
-                            <label for="morning">Hay por lo menos una persona durante la tarde</label> <br>
-                        </div>
-                        <div class="form-control">
-                            <input type="checkbox" name="night">
-                            <label for="night">Hay por lo menos una persona durante la noche</label> <br>
-                        </div>
-                    </div> <br>
-                    <div class="form-group" >
-                        <label for="propertyArea">Ingresa la cantidad de metros cuadrados de tu propiedad</label> <br>
-                        <input class="form-control" type="number" name="propertyArea"/>
-                    </div> <br>
-                    <div class="form-group" >
-                        <label for="lightBulbQuantity">Ingresa la cantidad de ampolletas en el hogar </label> <br>
-                        <input class="form-control" type="number" name="lightBulbQuantity"/>
-                    </div> <br>
-                    <div class="form-group" >
-                        <label> ¿Cuántas de tus ampolletas son LED?</label>
-                        <div class="form-control">
-                            <input type="radio" name="lightBulbType" value= <% true %>/>  
-                            <label for="lightBulbType">Todas</label> <br>
-                        </div>
-                        <div class="form-control">
-                            <input type="radio" name="lightBulbType" value= <% true %>/>
-                            <label for="lightBulbType">La mayoría</label> <br>
-                        </div>
-                        <div class="form-control">
-                            <input type="radio" name="lightBulbType" value= <% false %>/>
-                            <label for="lightBulbType">La minoría</label> <br>
-                        </div>
-                        <div class="form-control">
-                            <input type="radio" name="lightBulbType" value= <% false %>/>
-                            <label for="lightBulbType">Ninguna</label> <br>
-                        </div>
-                    </div> <br>
-                    <div class="form-group" >
-                        <label>Selecciona todas las medidas de eficiencia energética que hayas implementado en tu hogar</label>
-                        <div class="form-control">
-                            <input type="checkbox" name="solarPanel">
-                            <label for="solarPanel">Panel solar fotovoltáico</label> <br>
-                        </div>
-                        <div class="form-control">
-                            <input type="checkbox" name="refrigerator">
-                            <label for="refrigerator">Refrigerador con etiqueta de Eficiencia Energética A</label> <br>
-                        </div>
-                        <div class="form-control">
-                            <input type="checkbox" name="dryer">
-                            <label for="dryer">Secadora con etiqueta de Eficiencia Energética A</label> <br>
-                        </div>
-                        <div class="form-control">
-                        <input type="checkbox" name="stove">
-                        <label for="stove">Estufa eléctrica con etiqueta de Eficiencia Energética A</label> <br>
-                        </div>
-                    </div> <br>
-                    <div class="col text-center">
+                        <div class="form-group">
+                            <label for="averageConsumption"> Ingresa tu consumo
+                                promedio mensual. Puedes revisar esta cifra en tu
+                                boleta de consumo eléctrico.
+                                <input class="form-control" type="number"
+                                name="averageConsumption">
+                        </div> <br>
+                        <div class="form-group">
+                            <label for="clientType"> Seleccione su tipo de
+                                tarifa:<br>
+                                <p>
+                                Puedes revisar esto en tu boleta de consumo
+                                eléctrico, ya que determina el tipo de tarifa
+                                eléctrica que tu distribuidora te cobra.
+                                </p>
+                            <select class="form-group"> 
+                                <option value="BT1">BT1</option>
+                                <option value="BT2">BT2</option>
+                                <option value="BT3">BT3</option>
+                                <option value="BT4.1">BT4.1</option>
+                                <option value="BT4.3">BT4.3</option>
+                                <option value="AT2">AT2</option>
+                                <option value="AT3">AT3</option>
+                                <option value="AT4.3">AT4.3</option>
+                            </select>
+                        </div><br>
                         <input style="border-color: black; color: black; background-color: #FFC000;" class="btn btn-success" type="submit" value="Consultar"/>
                     </div> <br>
                 </form>
-            </div>
+                    </div>
         </section>
     </body>
 </html>
