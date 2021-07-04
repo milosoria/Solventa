@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
 
@@ -10,33 +11,47 @@
             <div class="content">
                 <div class="service">
                     <img class="rounded img-thumbnail float-left"
-                    src="<%=service.photo %>" style="height: auto;width: 300px;">
+                    src="<%=service.photo %>" style="height: 500px;width: 500px; margin-top: 7%;">
                     <div class="body">
                         <div class="jumbotron jumbotron-fluid">
-                            <h3 style="font-weight:bold;">Proveedor: <%=service.name%>
+                            <h3 style="font-weight:bold;"> <img  src="<%=service.providerPhoto %>" style="height: auto;width: 50px; border-radius: 50%;"> <%=service.name%> 
                                 <span class="badge badge-secondary"><%=
-                                    service.brand%></span></h3>
+                                    service.brand%></span>  </h3>
                             <hr class="my-4">
                             <ul>
                             <li><p class="font-weight-bold"><strong>Ahorro anual: $ </strong><span
                                 class="border"><%=
-                                service.minYearly.toLocaleString('de-DE').replace(/,/g,'.') %>-<%=
+                                service.minYearly.toLocaleString('de-DE').replace(/,/g,'.') %> - <%=
                                 service.maxYearly.toLocaleString('de-DE').replace(/,/g,'.') %></span></p>
                             <li><p class="font-weight-bold"><strong>Tiempo de recuperación de la
                             inversión: </strong><span
-                                class="border"><%= service.minReturn%>-<%=
+                                class="border"><%= service.minReturn%> - <%=
                                 service.maxReturn%> años</span></p>
                             <li><p class="font-weight-bold"><strong>Reducción de gases
                             invernaderos: </strong><%=
                             service.gasReduction%> toneladas de CO2 por año
                             </p>
                             <li><p class="font-weight-bold"><strong>Espacio a
-                                utilizar:</strong> <%=service.spaceAvailable%>
+                                disponible para instalación:</strong> <%=service.spaceAvailable%>
                             metros cuadrados</p>
                             <li><p class="font-weight-bold"><strong>Tiempo de vida de los
                             paneles: </strong><%=service.productLifetime%> años</p>
                             <br>
                             </ul>
+                            <div style="justify-content: center;">
+                                <h3>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <% if (service.rating >= 4.5) {%>
+                                        <span class="fa fa-star checked"></span> 
+                                    <%} else {%>
+                                        <span class="fa fa-star"></span> 
+                                    <%}  %>  
+                                </h3> <br>
+                            <a href="<%= serviceContactPath%>"><button type="button" class="btn btn-warning">Contactar Proveedor</button></a>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -54,10 +54,12 @@ yarn dev
 Now go to http://localhost:3000 and start browsing :)
 
 ### TODO
-- [ ] Seed de servicios
-- [ ] Modelo servicios
-- [ ] Cambiar form
-- [ ] Logica de las recomendaciones
-- [ ] Hacer consultas para guardar datos estaticamente
-
-service: name, rating, installedCapacity, price, brand, photo, location, maxReturn, minReturn, maxYearly, minYearly, spaceAvailable, gasReduction,  productLifetime
+- [X] Seed de servicios
+- [X] Modelo servicios
+- [X] Cambiar form
+- [X] Logica de las recomendaciones
+- [X] Hacer consultas para guardar datos estaticamente
+- [X] Cambiar leyenda de input de metros disponibles 
+- [X] Boton de contactar
+- [X] Filtrar por m² 
+- [X] Agregar imagen de proveedor

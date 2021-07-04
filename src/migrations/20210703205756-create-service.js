@@ -26,6 +26,9 @@ module.exports = {
       photo: {
         type: Sequelize.STRING
       },
+      providerPhoto: {
+        type: Sequelize.STRING
+      },
       maxReturn: {
         type: Sequelize.INTEGER
       },
