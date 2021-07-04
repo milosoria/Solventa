@@ -13,6 +13,12 @@
                     <div class="form-group">
                         <label for="comuna">¿En qué comuna vives?</label>
                         <br>
+                        <select class="form-group">          
+                            <%comunas.forEach((comuna) => {%>
+                            <option value="<%=comuna%>"><%=comuna%></option>
+                            <%})%>
+                        </select>
+                        <br>
                     </div> <br>
                     <div class="form-group" >
                         <label for="squareMeters">Ingresa la cantidad de metros cuadrados de tu propiedad
