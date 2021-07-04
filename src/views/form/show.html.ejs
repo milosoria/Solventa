@@ -13,22 +13,30 @@
                     src="<%=service.photo %>" style="height: auto;width: 300px;">
                     <div class="body">
                         <div class="jumbotron jumbotron-fluid">
-                            <h3 style="font-weight:bold;">Proveedor:<%=service.name%>
+                            <h3 style="font-weight:bold;">Proveedor: <%=service.name%>
                                 <span class="badge badge-secondary"><%=
                                     service.brand%></span></h3>
                             <hr class="my-4">
-                            <p class="font-italic">Ahorro anual: $ <span
-                                class="border"><%= service.minYearly %>  <%= service.maxYearly %></span></p>
-                            <p class="font-italic">Tiempo de recuperación de la
-                            inversión: <span
+                            <ul>
+                            <li><p class="font-weight-bold"><strong>Ahorro anual: $ </strong><span
+                                class="border"><%=
+                                service.minYearly.toLocaleString('de-DE').replace(/,/g,'.') %>-<%=
+                                service.maxYearly.toLocaleString('de-DE').replace(/,/g,'.') %></span></p>
+                            <li><p class="font-weight-bold"><strong>Tiempo de recuperación de la
+                            inversión: </strong><span
                                 class="border"><%= service.minReturn%>-<%=
-                                service.maxReturn%></span></p>
-                            <p class="font-weight-bold"><%=
-                            service.gasReduction%> tonCO2/año
+                                service.maxReturn%> años</span></p>
+                            <li><p class="font-weight-bold"><strong>Reducción de gases
+                            invernaderos: </strong><%=
+                            service.gasReduction%> toneladas de CO2 por año
                             </p>
-                            <p class="font-italic">Espacio a utilizar: <%=service.spaceAvailable%></p>
-                            <p class="font-italic">Tiempo de vida de los
-                            paneles: <%=service.productLifetime%></p>
+                            <li><p class="font-weight-bold"><strong>Espacio a
+                                utilizar:</strong> <%=service.spaceAvailable%>
+                            metros cuadrados</p>
+                            <li><p class="font-weight-bold"><strong>Tiempo de vida de los
+                            paneles: </strong><%=service.productLifetime%> años</p>
+                            <br>
+                            </ul>
                         </div>
                     </div>
                 </div>

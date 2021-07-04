@@ -9,6 +9,8 @@ module.exports = (sequelize, DataTypes) => {
      */
       static associate(models) {
         // define association here}
+    }
+
     };
     service.init({
         name: DataTypes.STRING,
