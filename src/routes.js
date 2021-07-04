@@ -1,7 +1,7 @@
 const KoaRouter = require('koa-router');
 
 const index = require('./routes/index');
-const form = require('./routes/form')
+const form = require('./routes/form');
 
 const router = new KoaRouter();
 
